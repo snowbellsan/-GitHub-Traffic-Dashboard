@@ -21,7 +21,7 @@
 ## 🎨 Demo
 
 Open the live demo on GitHub Pages:  
-👉 **[your-snowbellsan.github.io/github-traffic-dashboard](https://snowbellsan.github.io/Github-Traffic-Dashboard)**  
+👉 **[snowbellsan.github.io/github-traffic-dashboard](https://snowbellsan.github.io/github-traffic-dashboard)**  
 
 *(Replace `your-username` with your actual GitHub username after enabling Pages.)*
 
@@ -37,16 +37,21 @@ Open the live demo on GitHub Pages:
 4. Click **🚀 データ取得！** – the dashboard will populate instantly.
 5. Use the **Sort** controls to reorder the table and chart.
 
-> **Tip:** Keep your token private. Never commit it to the repo.
+> **Important**: This tool **only works with GitHub Classic PATs** (not Fine-grained tokens).
 
 ---
 
-## 🔒 Creating a Classic Token
+## 🔒 Creating a Classic Personal Access Token (PAT)
+
+> **This dashboard requires a Classic PAT** – Fine-grained tokens are **not supported**.
 
 1. Go to **Settings → Developer settings → Personal access tokens → Tokens (classic)**.
 2. Click **Generate new token (classic)**.
-3. Give it a name, select the **`repo`** scope, and generate.
-4. Copy the token and paste it into the dashboard.
+3. Give it a name and **select the `repo` scope** (required for traffic data).
+4. Generate and **copy the token**.
+5. Paste it into the **Classic Token** field in the dashboard.
+
+> **Warning**: Keep your token private. Never commit it to version control.
 
 ---
 
@@ -77,5 +82,4 @@ Open the live demo on GitHub Pages:
 ```bash
 git clone https://github.com/your-username/github-traffic-dashboard.git
 cd github-traffic-dashboard
-# (optional) git remote set-url origin <your-repo>
 git push origin main
